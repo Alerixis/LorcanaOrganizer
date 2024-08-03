@@ -1,11 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Codice.Client.Common.GameUI;
+using System.Linq;
 using LorcanaSpellbook.Enums;
 using LorcanaSpellbook.ScriptableObjects;
 using LorcanaSpellbook.Utils;
 using UnityEditor;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 namespace LorcanaSpellbook.Editor
@@ -44,8 +44,10 @@ namespace LorcanaSpellbook.Editor
                     RenderResults();
                     break;
                 case ToolState.CreateCards:
+                    RenderCreateState();
                     break;
                 case ToolState.Complete:
+                    RenderComplete();
                     break;
             }
         }
@@ -76,7 +78,6 @@ namespace LorcanaSpellbook.Editor
             }
         }
 
-
         private void RenderResults()
         {
             using (new EditorGUILayout.VerticalScope("box"))
@@ -84,12 +85,17 @@ namespace LorcanaSpellbook.Editor
                 EditorGUILayout.LabelField("Results:");
                 using (new EditorGUILayout.VerticalScope("box"))
                 {
-                    EditorGUILayout.BeginScrollView(_scrollPos);
+                    _scrollPos = EditorGUILayout.BeginScrollView(_scrollPos);
                     for (int i = 0; i < _parsedCards.Count; i++)
                     {
                         RenderCard(_parsedCards[i]);
                     }
                     EditorGUILayout.EndScrollView();
+
+                    if (GUILayout.Button("Continue"))
+                    {
+                        _currentState = ToolState.CreateCards;
+                    }
                 }
             }
         }
@@ -98,35 +104,114 @@ namespace LorcanaSpellbook.Editor
         {
             using (new EditorGUILayout.HorizontalScope())
             {
-                
+                EditorGUILayout.LabelField(card.FullName);
+            }
+        }
+
+        private void RenderCreateState()
+        {
+            if (GUILayout.Button("Import Cards"))
+            {
+                CreateAndUpdateCardAssets();
             }
         }
 
         private void ParseCSV()
         {
-            Debug.Log("CSV selected");
             _loadedCSV = File.ReadAllLines(_filePath);
             _parsedCards.Clear();
             for (int i = 1; i < _loadedCSV.Length - 1; i++)
             {
                 //Take each line. And parse it out to each card.
                 string[] splitLine = _loadedCSV[i].Split(",");
-
-                Card newCard = new Card
+                if (splitLine.Length != 7)
                 {
-                    Name = splitLine[0],
-                    Set = int.Parse(splitLine[1]),
-                    Number = int.Parse(splitLine[2]),
-                    InkColor = GeneralUtils.ConvertStringToEnum<InkColor>(splitLine[3]),
-                    Rarity = GeneralUtils.ConvertStringToEnum<Rarity>(splitLine[4]),
-                    CardType = GeneralUtils.ConvertStringToEnum<CardType>(splitLine[5]),
-                    Franchise = splitLine[6]
-                };
+                    continue;
+                }
+
+                Card newCard = CreateInstance<Card>();
+                newCard.FullName = splitLine[0];
+                newCard.Set = int.Parse(splitLine[1]);
+                newCard.Number = splitLine[2];
+                newCard.InkColor = GeneralUtils.ConvertStringToEnum<InkColor>(splitLine[3]);
+                newCard.Rarity = GeneralUtils.ConvertStringToEnum<Rarity>(splitLine[4]);
+                newCard.CardType = GeneralUtils.ConvertStringToEnum<CardType>(splitLine[5]);
+                newCard.Franchise = splitLine[6];
+
+                string[] splitName = newCard.FullName.Split(" - ");
+                if (splitName.Length != 2)
+                {
+                    newCard.Name = splitName[0];
+                }
+                else
+                {
+                    newCard.Name = splitName[0];
+                    newCard.SubName = splitName[1];
+                }
+
+                //Keep ourselves from creating new cards when we have matching hash codes.
+                newCard.CardHash = JsonUtility.ToJson(newCard).GetHashCode();
 
                 _parsedCards.Add(newCard);
             }
 
             _currentState = ToolState.ShowResults;
+        }
+
+        private void CreateAndUpdateCardAssets()
+        {
+            //Load all currently existing Card SO's
+            string path = Path.Combine(Application.dataPath, "Data/Cards");
+            DirectoryInfo dir = new DirectoryInfo(path);
+            FileInfo[] allFiles = dir.GetFiles("*.*");
+
+            List<Card> existingCards = new List<Card>();
+            foreach (FileInfo file in allFiles)
+            {
+                if (!file.Name.EndsWith("meta"))
+                {
+                    existingCards.Add(AssetDatabase.LoadAssetAtPath<Card>("Assets/Data/Cards/" + file.Name));
+                }
+            }
+
+            for (int i = 0; i < _parsedCards.Count; i++)
+            {
+                //If this card matches an existing hash code. Just update that card.
+                var matchingCard = existingCards.Where(card => card.CardHash == _parsedCards[i].CardHash).ToArray();
+                if (matchingCard.Length > 0)
+                {
+                    if (matchingCard.Length == 1)
+                    {
+                        //Just ignore this card. 
+                        Debug.Log("Card already imported: " + _parsedCards[i].FullName);
+                        continue;
+                    }
+                    else
+                    {
+                        Debug.LogError("There are multiple cards matching hash: " + _parsedCards[i].CardHash + " this is not good. Validate the csv for card index: " + i + " and name: " + _parsedCards[i].FullName);
+                        continue;
+                    }
+                }
+
+                //Otherwise, make a new one.
+                Card newCard = _parsedCards[i];
+
+                AssetDatabase.CreateAsset(newCard, "Assets/Data/Cards/" + newCard.Name + (string.IsNullOrEmpty(newCard.SubName) ? "" : "_" + newCard.SubName) + "_" + newCard.Set + "_" + newCard.Number + ".asset");
+                Debug.Log("Card Created: " + newCard.FullName);
+            }
+
+            _currentState = ToolState.Complete;
+        }
+
+        private void RenderComplete()
+        {
+            EditorGUILayout.LabelField("All done!");
+            if (GUILayout.Button("Restart?"))
+            {
+                _currentState = ToolState.SelectCSV;
+                _filePath = string.Empty;
+                _parsedCards.Clear();
+            }
         }
     }
 }

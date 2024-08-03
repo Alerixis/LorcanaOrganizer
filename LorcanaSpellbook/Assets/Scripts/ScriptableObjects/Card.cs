@@ -9,6 +9,9 @@ namespace LorcanaSpellbook.ScriptableObjects
     public class Card : ScriptableObject
     {
         [SerializeField]
+        public int CardHash;
+
+        [SerializeField]
         public string FullName;
 
         [SerializeField]
@@ -20,8 +23,11 @@ namespace LorcanaSpellbook.ScriptableObjects
         [SerializeField]
         public int Set;
 
+        /// <summary>
+        /// Is a string due to Puppies. 4a, 4b, etc.
+        /// </summary>
         [SerializeField]
-        public int Number;
+        public string Number;
 
         [SerializeField]
         public InkColor InkColor;

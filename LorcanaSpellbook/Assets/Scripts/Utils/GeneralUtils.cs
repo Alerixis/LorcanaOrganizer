@@ -14,6 +14,7 @@ namespace LorcanaSpellbook.Utils
         /// <exception cref="ArgumentException"></exception>
         public static T ConvertStringToEnum<T>(string stringToParse) where T : struct, IConvertible
         {
+            stringToParse = stringToParse.Replace(" ", "");
             Type typeToConvert = typeof(T);
             if (!typeToConvert.IsEnum)
             {

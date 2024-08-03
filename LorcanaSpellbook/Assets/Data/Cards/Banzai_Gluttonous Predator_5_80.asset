@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Banzai_Gluttonous Predator_5_80
+  m_EditorClassIdentifier: 
+  CardHash: -1811268207
+  FullName: Banzai - Gluttonous Predator
+  Name: Banzai
+  SubName: Gluttonous Predator
+  Set: 5
+  Number: 80
+  InkColor: 3
+  Rarity: 2
+  CardType: 0
+  Franchise: Lion King
+  CardImage: {fileID: 0}

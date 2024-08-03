@@ -1,11 +1,12 @@
 namespace LorcanaSpellbook.Enums
 {
-   public enum Rarity
-{
-    Common,
-    Uncommon,
-    Rare,
-    SuperRare,
-    Legendary,
-}
+    public enum Rarity
+    {
+        Common,
+        Uncommon,
+        Rare,
+        SuperRare,
+        Legendary,
+        Enchanted,
+    }
 }
