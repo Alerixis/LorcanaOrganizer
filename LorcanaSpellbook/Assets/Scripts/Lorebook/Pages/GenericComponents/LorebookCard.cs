@@ -1,3 +1,5 @@
+using System;
+using System.Text;
 using LorcanaLorebook.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,10 +14,24 @@ namespace LorcanaLorebook.UI
 
         public void InitializeCardUI(Card card)
         {
+            StringBuilder stringBuilder = new StringBuilder();
+
             cardToDisplay = card;
-            Resize(card.CardImage, (int)image.preferredWidth, (int)image.preferredHeight);
-            //Resize the sprite to fit our image renderer.
-            image.sprite = Sprite.Create(card.CardImage, new Rect(0, 0, (int)image.preferredWidth, (int)image.preferredHeight), new Vector2(0.5f, 0.5f), 100.0f);
+            try
+            {
+                Resize(card.CardImage, (int)image.preferredWidth, (int)image.preferredHeight);
+                //Resize the sprite to fit our image renderer.
+                image.sprite = Sprite.Create(card.CardImage, new Rect(0, 0, (int)image.preferredWidth, (int)image.preferredHeight), new Vector2(0.5f, 0.5f), 100.0f);
+            }
+            catch (Exception _)
+            {
+                stringBuilder.AppendLine("Failed card: " + card.FullName);
+            }
+
+            if (stringBuilder.Length > 0)
+            {
+                Debug.LogError("Failed Cards: " + stringBuilder.ToString());
+            }
         }
 
         private Texture2D Resize(Texture2D texture2D, int targetX, int targetY)
