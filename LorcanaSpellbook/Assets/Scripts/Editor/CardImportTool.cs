@@ -25,6 +25,7 @@ namespace LorcanaSpellbook.Editor
         private string[] _loadedCSV;
         private Vector2 _scrollPos;
         private List<Card> _parsedCards = new List<Card>();
+        private Dictionary<string, Texture2D> _loadedCardImages = new Dictionary<string, Texture2D>();
 
         [MenuItem("Custom Tools/Card Importer")]
         public static void OpenCardImportTool()
@@ -112,7 +113,7 @@ namespace LorcanaSpellbook.Editor
         {
             if (GUILayout.Button("Import Cards"))
             {
-                CreateAndUpdateCardAssets();
+                CreateOrUpdateCardAssets();
             }
         }
 
@@ -120,6 +121,9 @@ namespace LorcanaSpellbook.Editor
         {
             _loadedCSV = File.ReadAllLines(_filePath);
             _parsedCards.Clear();
+
+            LoadImages();
+
             for (int i = 1; i < _loadedCSV.Length - 1; i++)
             {
                 //Take each line. And parse it out to each card.
@@ -153,13 +157,50 @@ namespace LorcanaSpellbook.Editor
                 string cardHashString = newCard.FullName + newCard.Set + newCard.Number;
                 newCard.CardHash = cardHashString.GetHashCode();
 
+                newCard.CardImage = GetImageForCard(newCard.FullName);
+
                 _parsedCards.Add(newCard);
             }
 
             _currentState = ToolState.ShowResults;
         }
 
-        private void CreateAndUpdateCardAssets()
+        private void LoadImages()
+        {
+            _loadedCardImages.Clear();
+            string imagePath = Path.Combine(Application.dataPath, "Images/Cards");
+            DirectoryInfo imageDir = new DirectoryInfo(imagePath);
+            FileInfo[] setFiles = imageDir.GetFiles();
+            for (int i = setFiles.Length - 1; i >= 0; i--)
+            {
+                if (setFiles[i].Name.EndsWith(".meta"))
+                {
+                    continue;
+                }
+
+                var image = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Images/Cards/" + setFiles[i].Name);
+
+                if(image == null)
+                {
+                    Debug.LogError("No image loaded for: " + setFiles[i].Name);
+                    continue;
+                }
+
+                _loadedCardImages.Add(setFiles[i].Name.Replace(".png", "").ToLower().Replace(".jpg", ""), image);
+            }
+        }
+
+        private Texture2D GetImageForCard(string cardName)
+        {
+            if(!_loadedCardImages.TryGetValue(cardName.ToLower(), out Texture2D image))
+            {
+                Debug.LogError("Unable to find image for card: " + cardName.ToLower());
+                return null;
+            }
+            return image;
+        }
+
+        private void CreateOrUpdateCardAssets()
         {
 
             //Load all currently existing Card SO's
@@ -175,24 +216,6 @@ namespace LorcanaSpellbook.Editor
                 }
             }
 
-            //Load all card images
-            string imagePath = Path.Combine(Application.dataPath, "Images");
-            DirectoryInfo imageDir = new DirectoryInfo(imagePath);
-            DirectoryInfo[] setDirs = cardDir.GetDirectories();
-            List<FileInfo> imageFiles = new List<FileInfo>();
-            foreach (DirectoryInfo setDir in setDirs)
-            {
-                FileInfo[] setFiles = setDir.GetFiles();
-                for(int i = setFiles.Length - 1; i > 0; i--)
-                {
-                    if(setFiles[i].Name.EndsWith(".meta"))
-                    {
-                        continue;
-                    }
-                    imageFiles.Add(setFiles[i]);
-                }
-            }
-
             for (int i = 0; i < _parsedCards.Count; i++)
             {
                 //If this card matches an existing hash code. Just update that card.
@@ -204,6 +227,7 @@ namespace LorcanaSpellbook.Editor
                         //Just ignore this card. 
                         Debug.Log("Card already imported: " + _parsedCards[i].FullName + " updating card with this info");
                         matchingCards[0] = _parsedCards[i];
+                        
                         AssetDatabase.SaveAssetIfDirty(matchingCards[0]);
                         continue;
                     }
