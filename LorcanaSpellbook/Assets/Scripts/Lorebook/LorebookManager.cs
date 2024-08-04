@@ -1,34 +1,61 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using LorcanaLorebook.ScriptableObjects;
-using LorcanaLorebook.UI;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.AddressableAssets.ResourceLocators;
-using UnityEngine.ResourceManagement.AsyncOperations;
+using LorcanaLorebook.UI;
 
-public class LorebookManager : MonoBehaviour
+namespace LorcanaLorebook
 {
-    public AssetLabelReference cardsLabel;
 
-    private List<Card> _cards = new List<Card>();
-
-    // Start is called before the first frame update
-    void Start()
+    public class LorebookManager : MonoBehaviour
     {
-        //Once addressables load let's get all cards.
-        Addressables.InitializeAsync().Completed += OnAddressablesLoaded;
-    }
+        public static LorebookManager Instance { get; private set; }
 
-    private void OnAddressablesLoaded(AsyncOperationHandle<IResourceLocator> resourceLocations)
-    {
-        Debug.Log("Addressables initialized. Trying to load cards using label.");
-        Addressables.LoadAssetsAsync<Card>(cardsLabel, null).Completed += OnCardsLoaded;
-    }
+        [SerializeField]
+        public List<LorebookPage> SerializedPages;
+        public List<Card> Cards { get; private set; }
 
-    private void OnCardsLoaded(AsyncOperationHandle<IList<Card>> handle)
-    {
-        _cards = handle.Result.ToList();
+        private Dictionary<LorebookState, LorebookPage> _pagesByState = new Dictionary<LorebookState, LorebookPage>();
+
+        private LorebookPage _activePage;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            if (Instance != null)
+            {
+                Debug.LogError("Woah! Who made another lorebook manager? Instance is nonnull");
+                return;
+            }
+
+            Instance = this;
+
+            //Get all pages
+            foreach(LorebookPage page in SerializedPages)
+            {
+                _pagesByState.Add(page.LorebookState, page);
+            }
+
+            //Get the startup page and init.
+            _activePage = _pagesByState[LorebookState.Startup];
+            _activePage.Initialize(this);
+        }
+
+        public void OnCardsLoaded(List<Card> cards)
+        {
+            Cards = cards;
+            ChangeState(LorebookState.MainMenu);
+        }
+
+        public void ChangeState(LorebookState newState)
+        {
+            if(newState == _activePage.LorebookState){
+                Debug.LogWarning("Trying to set Lorebook state to the same state: " + newState.ToString());
+                return;
+            }
+
+            _activePage.Disable();
+            _activePage = _pagesByState[newState];
+            _activePage.Initialize(this);
+        }
     }
 }
