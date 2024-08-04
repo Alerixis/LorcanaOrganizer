@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Kakamora_Menacing Sailor_3_111
+  m_EditorClassIdentifier: 
+  CardHash: -1311147654
+  FullName: Kakamora - Menacing Sailor
+  Name: Kakamora
+  SubName: Menacing Sailor
+  Set: 3
+  Number: 111
+  InkColor: 4
+  Rarity: 0
+  CardType: 0
+  Franchise: Moana
+  CardImage: {fileID: 2800000, guid: ae7d511586d4d174c925fae1e9c5ee6d, type: 3}

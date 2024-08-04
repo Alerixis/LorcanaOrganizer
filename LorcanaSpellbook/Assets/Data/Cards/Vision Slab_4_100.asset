@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Vision Slab_4_100
+  m_EditorClassIdentifier: 
+  CardHash: 622508465
+  FullName: Vision Slab
+  Name: Vision Slab
+  SubName: 
+  Set: 4
+  Number: 100
+  InkColor: 3
+  Rarity: 1
+  CardType: 2
+  Franchise: Encanto
+  CardImage: {fileID: 2800000, guid: 3d657070ccd673340b96022fed1808f9, type: 3}

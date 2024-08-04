@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Maleficent_Mistress of All Evil_3_51
+  m_EditorClassIdentifier: 
+  CardHash: 2009838670
+  FullName: Maleficent - Mistress of All Evil
+  Name: Maleficent
+  SubName: Mistress of All Evil
+  Set: 3
+  Number: 51
+  InkColor: 1
+  Rarity: 4
+  CardType: 0
+  Franchise: Sleeping Beauty
+  CardImage: {fileID: 2800000, guid: 92c0a93346974904ebacba57c726513b, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Prince Charming_Heir to the Throne_2_157
+  m_EditorClassIdentifier: 
+  CardHash: 245725424
+  FullName: Prince Charming - Heir to the Throne
+  Name: Prince Charming
+  SubName: Heir to the Throne
+  Set: 2
+  Number: 157
+  InkColor: 5
+  Rarity: 2
+  CardType: 0
+  Franchise: Cinderella
+  CardImage: {fileID: 2800000, guid: 090c70339c8e8fc4a8e1f5e02e125485, type: 3}

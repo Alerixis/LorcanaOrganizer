@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Agustin Madrigal_Clumsy Dad_4_1
+  m_EditorClassIdentifier: 
+  CardHash: -870520012
+  FullName: Agustin Madrigal - Clumsy Dad
+  Name: Agustin Madrigal
+  SubName: Clumsy Dad
+  Set: 4
+  Number: 1
+  InkColor: 2
+  Rarity: 0
+  CardType: 0
+  Franchise: Encanto
+  CardImage: {fileID: 2800000, guid: c39393436a6476c4f94ac9cb45d994bd, type: 3}

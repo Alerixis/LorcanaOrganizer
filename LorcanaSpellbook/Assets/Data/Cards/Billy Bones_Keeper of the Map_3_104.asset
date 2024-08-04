@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3545fcc2e27b07d44a9fd7494dbfa296, type: 3}
+  m_Name: Billy Bones_Keeper of the Map_3_104
+  m_EditorClassIdentifier: 
+  CardHash: -806889492
+  FullName: Billy Bones - Keeper of the Map
+  Name: Billy Bones
+  SubName: Keeper of the Map
+  Set: 3
+  Number: 104
+  InkColor: 4
+  Rarity: 0
+  CardType: 0
+  Franchise: Treasure Planet
+  CardImage: {fileID: 2800000, guid: be76ea3e90c270c4aa2c3dc0bf6313ae, type: 3}
