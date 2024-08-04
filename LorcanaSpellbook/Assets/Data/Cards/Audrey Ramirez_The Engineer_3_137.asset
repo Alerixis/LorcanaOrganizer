@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 137
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Atlantis
   CardImage: {fileID: 2800000, guid: 8fb686946d05be54fbb2c60d826bb15f, type: 3}

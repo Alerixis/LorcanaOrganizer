@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 82
   InkColor: 3
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Hercules
   CardImage: {fileID: 2800000, guid: 2bb98a89e88def64b8515d2da1ed3289, type: 3}

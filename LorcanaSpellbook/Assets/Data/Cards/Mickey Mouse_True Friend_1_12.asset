@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 12
   InkColor: 2
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Classic Disney
   CardImage: {fileID: 2800000, guid: a06c7529e1da9c849a0f22139d4a27a1, type: 3}

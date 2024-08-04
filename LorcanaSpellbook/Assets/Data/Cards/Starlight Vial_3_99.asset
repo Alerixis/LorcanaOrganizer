@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 99
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 2
   Franchise: Lorcana
   CardImage: {fileID: 2800000, guid: c6573922a8e2c2747af0ac1517f3df49, type: 3}

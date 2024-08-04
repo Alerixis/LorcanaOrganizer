@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 210
   InkColor: 1
-  Rarity: 5
+  Rarity: 0
   CardType: 3
   Franchise: Aladdin
   CardImage: {fileID: 2800000, guid: 58d0141ee65cea146a72d284f9b53bcc, type: 3}

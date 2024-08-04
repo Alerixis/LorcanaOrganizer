@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 126
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Jungle Book
   CardImage: {fileID: 2800000, guid: 6d359b8b922d1ed4792c2db7df406311, type: 3}

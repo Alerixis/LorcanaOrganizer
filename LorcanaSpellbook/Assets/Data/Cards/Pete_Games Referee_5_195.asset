@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 195
   InkColor: 0
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Classic Disney
   CardImage: {fileID: 2800000, guid: df0ddaee347e3724ca7d4c411b4ee0e4, type: 3}

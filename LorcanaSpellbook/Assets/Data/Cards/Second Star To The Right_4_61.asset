@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 61
   InkColor: 1
-  Rarity: 2
+  Rarity: 0
   CardType: 4
   Franchise: Peter Pan
   CardImage: {fileID: 2800000, guid: 155326a1fd5f29647bed8215a1c2d7c9, type: 3}

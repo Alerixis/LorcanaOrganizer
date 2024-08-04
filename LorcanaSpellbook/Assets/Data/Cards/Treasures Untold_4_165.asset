@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 165
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 4
   Franchise: Little Mermaid
   CardImage: {fileID: 2800000, guid: 29198c8934b3e5a42a5b2de1e2f9277e, type: 3}

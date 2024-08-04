@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 64
   InkColor: 1
-  Rarity: 2
+  Rarity: 0
   CardType: 2
   Franchise: Beauty and the Beast
   CardImage: {fileID: 2800000, guid: f76728a959d4ee247967c9ddc1053d2c, type: 3}

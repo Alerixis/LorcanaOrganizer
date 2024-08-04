@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 11
   InkColor: 2
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Tangled
   CardImage: {fileID: 2800000, guid: 328c72e5a4cdd524b89ae10e80abd12f, type: 3}

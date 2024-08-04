@@ -1,4 +1,4 @@
-namespace LorcanaSpellbook.Enums
+namespace LorcanaLorebook.Enums
 {
     public enum Rarity
     {

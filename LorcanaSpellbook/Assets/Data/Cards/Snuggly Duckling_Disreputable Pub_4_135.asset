@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 135
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 1
   Franchise: Tangled
   CardImage: {fileID: 2800000, guid: 75c24a70dff77f943983f43fd8d7fcde, type: 3}

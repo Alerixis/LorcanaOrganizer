@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 129
   InkColor: 4
-  Rarity: 1
+  Rarity: 0
   CardType: 4
   Franchise: Tangled
   CardImage: {fileID: 2800000, guid: 8cd918e0f12cf1141b0557e87968b4a8, type: 3}

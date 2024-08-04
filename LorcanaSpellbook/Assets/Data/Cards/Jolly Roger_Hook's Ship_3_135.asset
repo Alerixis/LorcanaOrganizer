@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 135
   InkColor: 4
-  Rarity: 1
+  Rarity: 0
   CardType: 1
   Franchise: Peter Pan
   CardImage: {fileID: 2800000, guid: 5bc6bb4eb4eff374ea0d552b13b4779b, type: 3}

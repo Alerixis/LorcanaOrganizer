@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 96
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 4
   Franchise: Cinderella
   CardImage: {fileID: 2800000, guid: ff0b34b44b7f57746915e9f6804f28d9, type: 3}

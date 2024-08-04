@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 122
   InkColor: 4
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Treasure Planet
   CardImage: {fileID: 2800000, guid: 4395a0d9ea4bbb74fa3474d608bb2829, type: 3}

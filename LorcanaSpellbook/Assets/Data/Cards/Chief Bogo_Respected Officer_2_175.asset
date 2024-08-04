@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 175
   InkColor: 0
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Zootopia
   CardImage: {fileID: 2800000, guid: 12a9de1c2a4ee334aa07d47daf463bd5, type: 3}

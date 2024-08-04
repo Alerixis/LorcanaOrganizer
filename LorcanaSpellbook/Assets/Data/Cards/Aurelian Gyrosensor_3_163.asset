@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 163
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 2
   Franchise: Lorcana
   CardImage: {fileID: 2800000, guid: b21b5d67cde85c543800c37c556ec5c8, type: 3}

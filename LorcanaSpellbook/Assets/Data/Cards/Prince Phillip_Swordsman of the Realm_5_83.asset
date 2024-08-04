@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 83
   InkColor: 3
-  Rarity: 3
+  Rarity: 0
   CardType: 0
   Franchise: Sleeping Beauty
   CardImage: {fileID: 2800000, guid: 82e49b6e80a93b44f8d9351f92c46ebf, type: 3}

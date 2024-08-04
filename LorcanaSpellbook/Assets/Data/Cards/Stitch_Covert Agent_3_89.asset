@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 89
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Lilo and Stitch
   CardImage: {fileID: 2800000, guid: 26c3c3ce2d8c16f48a10b8337780d41c, type: 3}

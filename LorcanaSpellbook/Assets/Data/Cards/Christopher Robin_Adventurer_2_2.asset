@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 2
   InkColor: 2
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Winnie the Pooh
   CardImage: {fileID: 2800000, guid: e9b9817a68515404099b0ee5277ea08a, type: 3}

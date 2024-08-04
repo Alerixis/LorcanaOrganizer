@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 162
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 3
   Franchise: Alice in Wonderland
   CardImage: {fileID: 2800000, guid: b80735cfb293d8a448c0c74fdc81260a, type: 3}

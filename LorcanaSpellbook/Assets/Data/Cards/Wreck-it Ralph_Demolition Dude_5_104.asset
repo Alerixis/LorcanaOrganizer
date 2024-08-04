@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 104
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Wreck it Ralph
   CardImage: {fileID: 2800000, guid: d72c3fd284b46634ca63fda16e82a8c9, type: 3}

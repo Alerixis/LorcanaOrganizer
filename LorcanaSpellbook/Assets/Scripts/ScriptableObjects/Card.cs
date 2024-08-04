@@ -1,8 +1,8 @@
 using System;
-using LorcanaSpellbook.Enums;
+using LorcanaLorebook.Enums;
 using UnityEngine;
 
-namespace LorcanaSpellbook.ScriptableObjects
+namespace LorcanaLorebook.ScriptableObjects
 {
 
     [Serializable]

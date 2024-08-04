@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 94
   InkColor: 3
-  Rarity: 1
+  Rarity: 0
   CardType: 4
   Franchise: Classic Disney
   CardImage: {fileID: 2800000, guid: e1f5ed792e523824abc46674f6cf6b31, type: 3}

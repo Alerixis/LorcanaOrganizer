@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 203
   InkColor: 0
-  Rarity: 1
+  Rarity: 0
   CardType: 2
   Franchise: Great Mouse Detective
   CardImage: {fileID: 2800000, guid: f310eaaa275cb2e4fadc8268ab84f9a3, type: 3}

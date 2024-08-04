@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using LorcanaSpellbook.Enums;
-using LorcanaSpellbook.ScriptableObjects;
-using LorcanaSpellbook.Utils;
+using LorcanaLorebook.Enums;
+using LorcanaLorebook.ScriptableObjects;
+using LorcanaLorebook.Utils;
 using UnityEditor;
 using UnityEngine;
 
-namespace LorcanaSpellbook.Editor
+namespace LorcanaLorebook.Editor
 {
     public class CardImportTool : EditorWindow
     {
@@ -202,7 +202,6 @@ namespace LorcanaSpellbook.Editor
 
         private void CreateOrUpdateCardAssets()
         {
-
             //Load all currently existing Card SO's
             string cardPath = Path.Combine(Application.dataPath, "Data/Cards");
             DirectoryInfo cardDir = new DirectoryInfo(cardPath);
@@ -227,7 +226,6 @@ namespace LorcanaSpellbook.Editor
                         //Just ignore this card. 
                         Debug.Log("Card already imported: " + _parsedCards[i].FullName + " updating card with this info");
                         matchingCards[0] = _parsedCards[i];
-                        
                         AssetDatabase.SaveAssetIfDirty(matchingCards[0]);
                         continue;
                     }

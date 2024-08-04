@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 1
   InkColor: 2
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: TaleSpin
   CardImage: {fileID: 2800000, guid: 9cb08610f0dc7814eb3d03fe90272f5b, type: 3}

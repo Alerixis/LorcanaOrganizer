@@ -1,8 +1,10 @@
 fileFormatVersion: 2
 guid: 3a9ab7a356edf064eb0a9f0bd676e2c7
+labels:
+- Cards
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  assetBundleName: cards
+  assetBundleVariant: cards

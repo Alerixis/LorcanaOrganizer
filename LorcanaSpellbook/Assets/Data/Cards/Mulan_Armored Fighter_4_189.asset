@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 189
   InkColor: 0
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Mulan
   CardImage: {fileID: 2800000, guid: 4585d0c0842109646894b6b8bf26b4c9, type: 3}

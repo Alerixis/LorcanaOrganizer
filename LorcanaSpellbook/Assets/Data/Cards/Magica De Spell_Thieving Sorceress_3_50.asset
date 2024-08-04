@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 50
   InkColor: 1
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: DuckTales
   CardImage: {fileID: 2800000, guid: 85b45bda3a358a747974fc4d8d56fa23, type: 3}

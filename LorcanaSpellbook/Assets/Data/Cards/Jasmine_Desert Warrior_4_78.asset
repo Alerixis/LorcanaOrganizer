@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 78
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Aladdin
   CardImage: {fileID: 2800000, guid: f01ff5cef9b294844948ea1ee6c6434c, type: 3}

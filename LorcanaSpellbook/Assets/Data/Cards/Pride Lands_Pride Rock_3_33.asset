@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 33
   InkColor: 2
-  Rarity: 2
+  Rarity: 0
   CardType: 1
   Franchise: Lion King
   CardImage: {fileID: 2800000, guid: cbcd89a55e704b243bfe7506541fcc76, type: 3}

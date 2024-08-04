@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 115
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Brother Bear
   CardImage: {fileID: 2800000, guid: f015ce59b97f1804a8b7a7a17d840917, type: 3}

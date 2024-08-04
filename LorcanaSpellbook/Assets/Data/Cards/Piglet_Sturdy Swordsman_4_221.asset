@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 221
   InkColor: 0
-  Rarity: 5
+  Rarity: 0
   CardType: 0
   Franchise: Winnie the Pooh
   CardImage: {fileID: 2800000, guid: bf74bd1c0f0ce354c85c31ffe0b09edb, type: 3}

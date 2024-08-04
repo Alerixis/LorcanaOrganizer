@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 82
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Tangled
   CardImage: {fileID: 2800000, guid: 5d0ad6fa47785964ab96310aadea0679, type: 3}

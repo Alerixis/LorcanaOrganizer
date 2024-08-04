@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 112
   InkColor: 4
-  Rarity: 3
+  Rarity: 0
   CardType: 0
   Franchise: Rescuers
   CardImage: {fileID: 2800000, guid: b838694490b3ca0429e88a8616158d3f, type: 3}

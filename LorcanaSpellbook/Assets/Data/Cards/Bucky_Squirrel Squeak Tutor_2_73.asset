@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 73
   InkColor: 3
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Emperor's New Groove
   CardImage: {fileID: 2800000, guid: 72b5f56c544797843aecba7a7b31cc30, type: 3}

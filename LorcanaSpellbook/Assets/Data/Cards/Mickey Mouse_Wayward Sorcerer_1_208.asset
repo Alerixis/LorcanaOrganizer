@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 208
   InkColor: 1
-  Rarity: 5
+  Rarity: 0
   CardType: 0
   Franchise: Fantasia
   CardImage: {fileID: 2800000, guid: 175df69f94b7951418c76754d3c7af0a, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 134
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 2
   Franchise: Snow White
   CardImage: {fileID: 2800000, guid: 69062e15e61c75744bca45582e3e1831, type: 3}

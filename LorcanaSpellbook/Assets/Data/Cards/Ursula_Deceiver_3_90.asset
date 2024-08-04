@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 90
   InkColor: 3
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Little Mermaid
   CardImage: {fileID: 2800000, guid: 7e49195e2ecdc0445844f9be810698d5, type: 3}

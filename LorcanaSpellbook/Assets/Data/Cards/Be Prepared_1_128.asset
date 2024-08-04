@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 128
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 4
   Franchise: Lion King
   CardImage: {fileID: 2800000, guid: ca23f6df1c832754fab39f78ec15546e, type: 3}

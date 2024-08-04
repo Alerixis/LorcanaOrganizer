@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 161
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Winnie the Pooh
   CardImage: {fileID: 2800000, guid: 61437835276d60e449fedfe90cead502, type: 3}

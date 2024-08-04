@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 57
   InkColor: 1
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Pinocchio
   CardImage: {fileID: 2800000, guid: 80c3f11515f26864dac4620d478ff258, type: 3}

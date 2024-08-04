@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 131
   InkColor: 4
-  Rarity: 2
+  Rarity: 0
   CardType: 2
   Franchise: Mulan
   CardImage: {fileID: 2800000, guid: 867428f1d3d606e4cb83f534b098c8cd, type: 3}

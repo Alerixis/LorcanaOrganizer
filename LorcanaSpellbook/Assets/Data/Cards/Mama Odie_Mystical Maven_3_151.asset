@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 151
   InkColor: 5
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Princess and the Frog
   CardImage: {fileID: 2800000, guid: f86c476557926244bb9613d0cf444683, type: 3}

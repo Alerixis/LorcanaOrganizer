@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 12
   InkColor: 2
-  Rarity: 3
+  Rarity: 0
   CardType: 0
   Franchise: Jungle Book
   CardImage: {fileID: 2800000, guid: 9e3247db6bb38b34ebd187e6df756cf8, type: 3}

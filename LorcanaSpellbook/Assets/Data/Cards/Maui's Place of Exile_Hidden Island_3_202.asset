@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 202
   InkColor: 0
-  Rarity: 2
+  Rarity: 0
   CardType: 1
   Franchise: Moana
   CardImage: {fileID: 2800000, guid: 9ddbf13a3e34d39469747fd9071f7626, type: 3}

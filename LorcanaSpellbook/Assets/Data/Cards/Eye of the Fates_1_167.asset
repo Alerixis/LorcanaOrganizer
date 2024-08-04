@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 167
   InkColor: 5
-  Rarity: 1
+  Rarity: 0
   CardType: 2
   Franchise: Hercules
   CardImage: {fileID: 2800000, guid: e195ab5f6c0182f4aa82f265b0ef6cfd, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 106
   InkColor: 4
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: 101 Dalmatians
   CardImage: {fileID: 2800000, guid: f524d6832415a7443a6ae8f02dd208ab, type: 3}

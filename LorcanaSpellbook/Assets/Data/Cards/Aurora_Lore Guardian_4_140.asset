@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 140
   InkColor: 5
-  Rarity: 3
+  Rarity: 0
   CardType: 0
   Franchise: Sleeping Beauty
   CardImage: {fileID: 2800000, guid: 8ae7346016ef99b479ae37cd5667bcb4, type: 3}

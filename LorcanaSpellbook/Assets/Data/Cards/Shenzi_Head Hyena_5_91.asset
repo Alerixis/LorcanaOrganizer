@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 91
   InkColor: 3
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Lion King
   CardImage: {fileID: 2800000, guid: 615f5c5e3ffcd6d409adaa0e3c86eda4, type: 3}

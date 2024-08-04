@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 90
   InkColor: 3
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Classic Disney
   CardImage: {fileID: 2800000, guid: 42a387a6362bd9a4091d40f539eaa8a5, type: 3}

@@ -1,7 +1,12 @@
 using System;
-using LorcanaSpellbook.Enums;
+using System.Collections.Generic;
+using System.IO;
+using LorcanaLorebook.Enums;
+using LorcanaLorebook.ScriptableObjects;
+using UnityEditor;
+using UnityEngine;
 
-namespace LorcanaSpellbook.Utils
+namespace LorcanaLorebook.Utils
 {
     public static class GeneralUtils
     {
@@ -30,5 +35,4 @@ namespace LorcanaSpellbook.Utils
             throw new ArgumentException("This is not a value in Enum of type" + typeof(T) + " with value: " + stringToParse);
         }
     }
-
 }

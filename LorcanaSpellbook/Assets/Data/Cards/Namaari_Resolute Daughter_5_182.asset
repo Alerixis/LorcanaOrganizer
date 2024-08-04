@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 5
   Number: 182
   InkColor: 0
-  Rarity: 2
+  Rarity: 0
   CardType: 0
   Franchise: Raya and the Last Dragon
   CardImage: {fileID: 2800000, guid: 2f76250b210091740901d6d7b6cc354a, type: 3}

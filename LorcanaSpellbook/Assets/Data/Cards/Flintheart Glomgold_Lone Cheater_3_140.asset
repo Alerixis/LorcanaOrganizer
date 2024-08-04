@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 3
   Number: 140
   InkColor: 5
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: DuckTales
   CardImage: {fileID: 2800000, guid: b49d68985de60e344b45ac447cd9f8ce, type: 3}

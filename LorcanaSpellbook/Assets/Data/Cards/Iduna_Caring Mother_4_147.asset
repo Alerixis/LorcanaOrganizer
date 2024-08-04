@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 147
   InkColor: 5
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Frozen
   CardImage: {fileID: 2800000, guid: 23d36d97b97956c408b6bd0e88f54e2b, type: 3}

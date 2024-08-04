@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 49
   InkColor: 1
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Sword in the Stone
   CardImage: {fileID: 2800000, guid: d799fecfe7ae89849be06204f5f0cd71, type: 3}

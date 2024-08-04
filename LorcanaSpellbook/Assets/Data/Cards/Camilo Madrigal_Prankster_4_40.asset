@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 40
   InkColor: 1
-  Rarity: 1
+  Rarity: 0
   CardType: 0
   Franchise: Encanto
   CardImage: {fileID: 2800000, guid: 01de3ca77e97a7445b948c4c72f18b49, type: 3}

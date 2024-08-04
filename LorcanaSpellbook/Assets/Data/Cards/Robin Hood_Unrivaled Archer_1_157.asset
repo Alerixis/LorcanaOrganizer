@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 1
   Number: 157
   InkColor: 5
-  Rarity: 3
+  Rarity: 0
   CardType: 0
   Franchise: Robin Hood
   CardImage: {fileID: 2800000, guid: 47ee75a8f8997dc468614f977676c2c4, type: 3}

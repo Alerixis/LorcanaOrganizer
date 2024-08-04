@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 2
   Number: 170
   InkColor: 5
-  Rarity: 1
+  Rarity: 0
   CardType: 2
   Franchise: Rescuers
   CardImage: {fileID: 2800000, guid: 077ea2c465c4c594dab15e55b1587215, type: 3}

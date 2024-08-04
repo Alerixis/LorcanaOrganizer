@@ -19,7 +19,7 @@ MonoBehaviour:
   Set: 4
   Number: 162
   InkColor: 5
-  Rarity: 1
+  Rarity: 0
   CardType: 4
   Franchise: Princess and the Frog
   CardImage: {fileID: 2800000, guid: e8a0906ec0a1fc146b2969f194b4db7a, type: 3}
