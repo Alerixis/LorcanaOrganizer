@@ -149,8 +149,9 @@ namespace LorcanaSpellbook.Editor
                     newCard.SubName = splitName[1];
                 }
 
-                //Keep ourselves from creating new cards when we have matching hash codes.
-                newCard.CardHash = JsonUtility.ToJson(newCard).GetHashCode();
+                //Keep ourselves from creating new cards when we have matching hash codes. Will allow for easy updating as well.
+                string cardHashString = newCard.FullName + newCard.Set + newCard.Number;
+                newCard.CardHash = cardHashString.GetHashCode();
 
                 _parsedCards.Add(newCard);
             }
@@ -160,13 +161,13 @@ namespace LorcanaSpellbook.Editor
 
         private void CreateAndUpdateCardAssets()
         {
-            //Load all currently existing Card SO's
-            string path = Path.Combine(Application.dataPath, "Data/Cards");
-            DirectoryInfo dir = new DirectoryInfo(path);
-            FileInfo[] allFiles = dir.GetFiles("*.*");
 
+            //Load all currently existing Card SO's
+            string cardPath = Path.Combine(Application.dataPath, "Data/Cards");
+            DirectoryInfo cardDir = new DirectoryInfo(cardPath);
+            FileInfo[] allCardFiles = cardDir.GetFiles("*.*");
             List<Card> existingCards = new List<Card>();
-            foreach (FileInfo file in allFiles)
+            foreach (FileInfo file in allCardFiles)
             {
                 if (!file.Name.EndsWith("meta"))
                 {
@@ -174,16 +175,36 @@ namespace LorcanaSpellbook.Editor
                 }
             }
 
+            //Load all card images
+            string imagePath = Path.Combine(Application.dataPath, "Images");
+            DirectoryInfo imageDir = new DirectoryInfo(imagePath);
+            DirectoryInfo[] setDirs = cardDir.GetDirectories();
+            List<FileInfo> imageFiles = new List<FileInfo>();
+            foreach (DirectoryInfo setDir in setDirs)
+            {
+                FileInfo[] setFiles = setDir.GetFiles();
+                for(int i = setFiles.Length - 1; i > 0; i--)
+                {
+                    if(setFiles[i].Name.EndsWith(".meta"))
+                    {
+                        continue;
+                    }
+                    imageFiles.Add(setFiles[i]);
+                }
+            }
+
             for (int i = 0; i < _parsedCards.Count; i++)
             {
                 //If this card matches an existing hash code. Just update that card.
-                var matchingCard = existingCards.Where(card => card.CardHash == _parsedCards[i].CardHash).ToArray();
-                if (matchingCard.Length > 0)
+                var matchingCards = existingCards.Where(card => card.CardHash == _parsedCards[i].CardHash).ToArray();
+                if (matchingCards.Length > 0)
                 {
-                    if (matchingCard.Length == 1)
+                    if (matchingCards.Length == 1)
                     {
                         //Just ignore this card. 
-                        Debug.Log("Card already imported: " + _parsedCards[i].FullName);
+                        Debug.Log("Card already imported: " + _parsedCards[i].FullName + " updating card with this info");
+                        matchingCards[0] = _parsedCards[i];
+                        AssetDatabase.SaveAssetIfDirty(matchingCards[0]);
                         continue;
                     }
                     else
