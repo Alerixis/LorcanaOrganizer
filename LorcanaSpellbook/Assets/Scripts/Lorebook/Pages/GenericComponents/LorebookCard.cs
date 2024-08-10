@@ -19,9 +19,9 @@ namespace LorcanaLorebook.UI
             cardToDisplay = card;
             try
             {
-                Resize(card.CardImage, (int)image.preferredWidth, (int)image.preferredHeight);
+                Texture2D newImage = Resize(card.CardImage, (int)image.preferredWidth, (int)image.preferredHeight);
                 //Resize the sprite to fit our image renderer.
-                image.sprite = Sprite.Create(card.CardImage, new Rect(0, 0, (int)image.preferredWidth, (int)image.preferredHeight), new Vector2(0.5f, 0.5f), 100.0f);
+                image.sprite = Sprite.Create(newImage, new Rect(0, 0, newImage.width, newImage.height), new Vector2(0.5f, 0.5f), 100.0f);
             }
             catch (Exception _)
             {
