@@ -244,6 +244,8 @@ namespace LorcanaLorebook.Editor
             }
 
             _currentState = ToolState.Complete;
+
+            AssetDatabase.SaveAssets();
         }
 
         private void RenderComplete()
